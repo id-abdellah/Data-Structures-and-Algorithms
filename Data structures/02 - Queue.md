@@ -144,6 +144,10 @@ class Queue {
     isEmpty() {
         return this.size() == 0
     }
+
+    peek() {
+        return this.items[this.head]
+    }
 }
 ```
 
