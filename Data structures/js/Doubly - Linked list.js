@@ -81,6 +81,23 @@ class DoublyLinkedList {
         return value;
     };
 
+    insert(value, index) {
+        if (index < 0 || index > this.getSize() - 1) return console.error("Invalid index");
+        if (index == 0) {
+            this.prepend(value);
+            return;
+        }
+
+        const newNode = new node(value);
+        let previousNode = this.head;
+        for (let i = 0; i < index - 1; i++) {
+            previousNode = previousNode.next;
+        }
+        newNode.next = previousNode.next;
+        previousNode.next = newNode;
+        this.size++;
+    }
+
     print() {
         if (this.isEmpty()) return "List is empty";
         let headNode = this.head;
