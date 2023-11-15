@@ -1,4 +1,4 @@
-const LinkedList = require("./Singly - Linked list with tail");
+const LinkedList = require("./LinkedList - Singly with Tail");
 
 class LinkedListStack {
     constructor() {
